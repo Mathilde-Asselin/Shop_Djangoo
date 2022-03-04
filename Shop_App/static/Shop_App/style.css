@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1{
+    text-align: center;
+    border-bottom : solid #D15800 2px;
+    height : 70px;
+    display : flex; 
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+.card-container{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    width : 100% !important;
+    grid-gap: 30px;
+}
+
+form{
+    width : 490px;
+    padding : 20px 20px; 
+    border-radius: 5px;
+    height : 440px;
+
+}
+
+form p{
+    display : block;
+    margin: 0 auto;
+}
+form p label{
+    width : 100%;
+}
+form p input{
+    width: 450px;
+}
+
+h2{
+    font-size : 24px;
+}
