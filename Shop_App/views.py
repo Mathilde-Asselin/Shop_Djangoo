@@ -29,8 +29,8 @@ def update(request, id):
     
     obj = get_object_or_404(Card, id = id)
     quantity = obj.quantity
-    
-    form = UpdateForm(request.POST or None, instance = obj)
+
+    form = UpdateForm(request.POST or None, instance = obj, initial={"quantity": "0"})
     if form.is_valid():
         a = form.save(commit=False)
         a.quantity = quantity - obj.quantity 
