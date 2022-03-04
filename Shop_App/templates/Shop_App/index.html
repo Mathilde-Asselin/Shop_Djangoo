@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop_App</title>
+</head>
+
+<body>
+
+    <h1>Voici mes cards</h1>
+
+    <div class="list_cards">
+    
+        {% for data in dataset %}
+    
+        {{ data.title }}<br/>
+        <img src="{{ data.img }}" width="200px"><br/>
+        {{ data.description }}<br/>
+        {{ data.price }}€<br/>
+        {{ data.quantity }} dispo<br/>
+        <button><a href="{{data.id}}/update">Update</a></button>
+        <hr/>
+        
+    
+        {% endfor %}
+    
+    </div>
+
+    <div class="create_card">
+
+        <form method="POST" enctype="multipart/form-data">
+    
+            <!-- Security token -->
+            {% csrf_token %}
+        
+            <!-- Using the formset -->
+            {{ form.as_p }}
+            
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+</body>
+</html>
