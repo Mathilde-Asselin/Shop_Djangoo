@@ -19,7 +19,7 @@ def index(request):
         form.save()
 
     context['form']= form
-    context["dataset"] = Card.objects.all()
+    context["dataset"] = Card.objects.all().exclude(quantity=0)
 
     return render(request, 'Shop_App/index.html', context)
 
@@ -28,11 +28,14 @@ def update(request, id):
     context ={}
     
     obj = get_object_or_404(Card, id = id)
-
+    quantity = obj.quantity
+    
     form = UpdateForm(request.POST or None, instance = obj)
- 
     if form.is_valid():
-        form.save()
+        a = form.save(commit=False)
+        a.quantity = quantity - obj.quantity 
+        a.save()
+
         return HttpResponseRedirect("/Shop_App")
  
     context["form"] = form

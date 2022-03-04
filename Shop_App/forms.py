@@ -25,6 +25,7 @@ class UpdateForm(forms.ModelForm):
     class Meta:
         # specify model to be used
         model = Card
+        # quantity = forms.IntegerField(widget=forms.HiddenInput(), initial=0) 
  
         # specify fields to be used
         fields = [
