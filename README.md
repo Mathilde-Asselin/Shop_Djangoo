@@ -2,7 +2,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
 
-Voici notre projet Python du 04.03.2022 - Mathilde Asselin & Hugo Boudalier
+Voici notre projet Django du 04.03.2022 - Mathilde Asselin & Hugo Boudalier
 
 ## :boom: Démarrage
 
@@ -35,11 +35,14 @@ Et let's go !
 
 ## 🔔 Différentes routes
 
+Exercice n°02 - Eshop Django
 - Eshop : /Shop_App => Permet d'accéder à l'exo n°02
 - Eshop update & details : /Shop_App/id/update => Index de l'eshop
 
+Exercice n°02 - Service messagerie
 - Chat : /chat => Permet d'accéder à la page messagerie  
 
+Exercice n°01 - CRUD 
 - Crud create : /Django_App => Permet d'accéder à l'exo01 et à la création des questions
 - Crud list : /Django_App/listview => Liste des questions
 - Crud detail : /Django_App/listview/id => Detail des questions
