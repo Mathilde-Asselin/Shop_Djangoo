@@ -13,23 +13,29 @@
     
     <div class="update_card">
 
-        {{ data.title }}<br/>
-        <img src="{{ data.img }}" width="200px"><br/>
-        {{ data.description }}<br/>
-        {{ data.price }}€<br/>
-        {{ data.quantity }} disponible<br/>
+        <div class="card" style="width: 18rem; display: flex; margin: 20px;">
         
-        <form method="POST">
-            <!-- Security token by Django -->
-            {% csrf_token %}
-     
-            <!-- form as paragraph -->
-            {{ form.as_p }}
-     
-            <input type="submit" value="Update">
-        </form>
+            <img class="card-img-top" src="{{ data.img }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ data.title }}</h5>
+              <p class="card-text">{{ data.description }}</p>
+              <p class="card-text">{{ data.price }}€ - {{ data.quantity }} produits disponible</p>
+              <form method="POST">
+                <!-- Security token by Django -->
+                {% csrf_token %}
+         
+                <!-- form as paragraph -->
+                {{ form.as_p }}
+         
+                <input type="submit" value="Update">
+            </form>
+
+            </div>
+            
+        </div>
      
     </div>
 
 </body>
+
 </html>

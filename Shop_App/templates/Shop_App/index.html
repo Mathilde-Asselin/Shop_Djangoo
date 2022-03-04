@@ -13,9 +13,9 @@
 
     <h1>Fruits Shop</h1>
 
-    <div class="list_cards">
+    <div class="list_cards" style="display: flex;">
     
-        <div class="card" style="width: 18rem; display: flex; float: left;" >
+        <div class="card" style="width: 18rem; display: flex; margin: 20px;">
             {% for data in dataset %}
             <img class="card-img-top" src="{{ data.img }}" alt="Card image cap">
             <div class="card-body">
@@ -25,7 +25,7 @@
               <a href="{{data.id}}/update" class="btn btn-primary">Update</a>
             </div>
             {% endfor %}
-        </div>
+        </div><br>
     </div>
 
     <div class="create_card">
