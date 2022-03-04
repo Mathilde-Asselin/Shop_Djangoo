@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin : 0;
+    font-family: 'Poppins', sans-serif;
+}
+.messagerie{
+    display : grid; 
+    width : 1000px;
+    margin : 0 auto;
+}
+h1{
+    text-align: center;
+    border-bottom : solid #D15800 2px;
+    height : 70px;
+    display : flex; 
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.form-text{
+    width : 400px; 
+    height : 45px !important;
+    border-radius : 5px;
+    margin-bottom : 50px;
+}
+.form-submit{
+    width : 150px; 
+    height : 45px;
+    border : none; 
+    background:#D15800 ;
+    color : white;
+    border-radius : 5px;
+    font-size: 24px;
+}
+
+.messages div{
+    border-radius : 15px;
+    background: #0099FF;
+    width : 250px;
+    padding : 12px 24px;
+    margin-bottom : 15px;
+}
+
+.messages div p{
+    width : auto;
+    margin : 0;
+    color : white; 
+}
